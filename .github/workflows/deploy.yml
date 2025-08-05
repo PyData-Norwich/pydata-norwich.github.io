@@ -28,7 +28,7 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
 
-      - name: Build site (Optional, uncomment and customize if your site needs a build step)
+      - name: Build site
         run: |
           make init-venv
           make build
