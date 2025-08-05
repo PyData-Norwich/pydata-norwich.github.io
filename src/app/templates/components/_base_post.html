@@ -1,0 +1,33 @@
+<div class="post">
+    <div class="post-image">
+        <img src="static/images/{{ post.image }}">
+    </div>
+    
+    <div class="post-main">
+
+        <div class="post-content">
+            <div class="post-header">
+                <h2>{{ post.title }}</h2>
+                <div class="ident">
+                    <div class="ident-block ident-block-blue"></div>
+                    <div class="ident-block ident-block-orange"></div>
+                    <div class="ident-block ident-block-blue"></div>
+                </div>
+            </div>
+            
+
+            {% block post_content %}
+            {% endblock post_content %}
+            
+            {% if post.button %}
+            <div class="post-footer">
+                <a href="{{ post.button.href }}" class="btn btn-blue">{{post.button.text}}</a>
+            </div>
+            {% endif %}
+
+
+        </div>
+
+        
+    </div>
+</div>

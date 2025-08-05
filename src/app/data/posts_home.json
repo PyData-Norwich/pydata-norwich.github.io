@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Welcome to PyData Norwich",
+        "image": "landscape_cropped.jpg",
+        "contents": [
+            "We hold regular meetups at the Artlist offices in Norwich. If you're interested in anything to do with Python, Data Science, Artificial Intelligence, Machine Learning, Data Analytics and more, please join us in a friendly and welcoming environment. We hold speaking events, workshops and regular social get-togethers if you're just looking to connect with others in the field.",
+            "You can check out past and future events on the <a href=\"events.html\">events page</a> or head over to our <a href=\"https://www.meetup.com/pydata-norwich\">Meetup group</a>."
+        ],
+        "button": {
+            "text": "Meetup",
+            "href": "https://www.meetup.com/pydata-norwich"
+        }
+    },
+    {
+        "title": "What is PyData?",
+        "image": "pydata_small.png",
+        "contents": [
+            "PyData is an educational program of <a href=\"https://numfocus.org/\">NumFOCUS</a>, a nonprofit charity promoting open practices in research, data, and scientific computing. It provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other.",
+            "PyData aims to be an accessible, community-driven conference, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases."
+        ],
+        "button": {
+            "text": "Learn more",
+            "href": "https://www.pydata.org"
+        }
+    }
+] 

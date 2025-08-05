@@ -1,0 +1,20 @@
+<nav class="navbar">
+    <div class="container nav-container">
+    <div class="navbar-logo">
+            <a href="index.html"><img src="static/images/pydata_large.png"></a>
+            <h2>: Norwich</h2>
+    </div>
+    <div class="hamburger" onclick="showNavbar()">&#9776;</div>
+    <ul class="navbar-links">
+        {% for route in request.app.routes %}
+            {% if route.path != '/static' %}
+            <li>
+                <a href="{{route.path}}" {% if route.path == request.url.path %}class="active"{% endif %}>
+                {{ route.name.capitalize() }}
+                </a>
+            </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+</nav>

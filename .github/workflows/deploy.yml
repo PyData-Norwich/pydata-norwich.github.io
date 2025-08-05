@@ -1,0 +1,43 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # This workflow will only run on pushes to the 'main' branch
+
+permissions:
+  contents: read # Allows the action to read your repository's code
+  pages: write   # Allows the action to deploy to GitHub Pages
+  id-token: write # Required for OpenID Connect (OIDC) authentication with GitHub Pages
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Specifies the runner environment
+    env:
+      PYTHONPATH: ${{ github.workspace }}/src/app
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Checks out your repository code
+
+      - name: "Set up Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Build site (Optional, uncomment and customize if your site needs a build step)
+        run: |
+          make init-venv
+          make build
+                    
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3 # Uploads the 'site' directory as an artifact
+        with:
+          path: './site' # The path to your built site directory
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 # Deploys the uploaded artifact to GitHub Pages

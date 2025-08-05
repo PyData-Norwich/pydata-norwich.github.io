@@ -1,0 +1,15 @@
+{% extends 'pages/_base.html' %}
+
+{% block content %}
+
+{% include 'components/hero.html' %}
+
+<div class="container">
+
+    {% for post in posts %}
+        {% include 'components/post.html' %}
+    {% endfor %}
+    
+</div>
+
+{% endblock content %}
