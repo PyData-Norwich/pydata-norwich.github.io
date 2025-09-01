@@ -6,6 +6,8 @@
 }
 
 .nav-container {
+    position: relative;
+    width: 100%;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
@@ -83,14 +85,15 @@
     .navbar-links {
         display: flex;        
         position: absolute;
-        right: -310px;
+        right: 0px;
         top: 89px;
         flex-direction: column;
         background-color: var(--white-background);
         z-index: 3;
         width: 300px;
         padding: 20px 0px;
-        transition: right 0.2s ease;
+        transform: translateX(300px);
+        transition: transform 0.2s ease;
     }
 
     .navbar-links a {
@@ -98,7 +101,7 @@
     }
 
     .navbar-links.show {
-        right: 0px;
+        transform: translateX(70px);
     }
 
     .navbar-links li {
