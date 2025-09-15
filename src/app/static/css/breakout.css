@@ -1,0 +1,141 @@
+
+
+.breakout-section {
+    padding: 80px 0;
+}
+
+.breakout-section-white {
+    background-color: white;
+}
+
+.breakout-section-blue {
+    background-color: var(--light-blue);
+    color: white;
+}
+
+.breakout-section-orange {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+.breakout-section-blue a {
+    color: white;
+    text-decoration: underline;
+}
+
+.breakout-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.breakout-text {
+    flex: 3;
+}
+
+.breakout-image {
+    flex: 1;
+}
+
+.breakout-text h2 {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.breakout-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.breakout-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.breakout-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.breakout-buttons .btn {
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.breakout-buttons .btn-white {
+    background-color: white;
+    color: var(--light-blue);
+}
+
+.breakout-buttons .btn-white:hover {
+    background-color: rgb(232, 232, 232);
+    color: var(--light-blue);
+}
+
+.breakout-buttons .btn-orange {
+    background-color: var(--primary-orange);
+    color: white;
+}
+
+.breakout-buttons .btn-orange:hover {
+    background-color: var(--primary-orange-saturated);
+}
+
+.breakout-buttons .btn-outline-white {
+    border: 1px solid white;
+    color: white;
+}
+
+.breakout-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.breakout-image svg {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .breakout-content {
+        flex-direction: column-reverse;
+    }
+
+    .breakout-text {
+        flex: 1;
+    }
+
+    .breakout-image {
+        flex: 1;
+    }
+
+    .breakout-text h2 {
+        font-size: 2em;
+    }
+
+    .breakout-text h3 {
+        font-size: 1.5em;
+    }
+    
+    .breakout-text p {
+        font-size: 1em;
+    }
+
+    .breakout-buttons {
+        flex-direction: column;
+    }
+
+}

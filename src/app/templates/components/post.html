@@ -1,10 +1,39 @@
-{% extends 'components/_base_post.html' %}
+<div class="post">
+    <div class="post-image">
+        <img src="/static/images/{{ post.image }}">
+    </div>
+    
+    <div class="post-main">
 
-{% block post_content %}
+        <div class="post-content">
+            <div class="post-header">
+                <h2>{{ post.title }}</h2>
+            </div>
+            
+            <div class="ident">
+                <div class="ident-block ident-block-blue"></div>
+                <div class="ident-block ident-block-orange"></div>
+                <div class="ident-block ident-block-blue"></div>
+            </div>
 
-<div class="post-details">
-    {{ post.content|safe }}
+            <div class="post-details">
+                {{ post.content|safe }}
+            </div>
+        
+        </div>
+
+    </div>
+
+    <div class="post-footer">
+
+
+
+    {% if post.button %}
+        <div class="post-footer-button">
+            <a href="{{ post.button.href }}" class="btn btn-blue">{{post.button.text}}</a>
+        </div>
+    {% endif %}
+
+    </div>
+
 </div>
-
-
-{% endblock %}

@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from config import settings
-from schemas import Post, EventPost
+from schemas import Post, EventPost, Resource
 
 app = FastAPI(
     title='PyData Norwich',
@@ -31,10 +31,9 @@ def home(request: Request) -> HTMLResponse:
 @app.get('/events', name='events')
 def events(request: Request) -> HTMLResponse:
 
-    EVENTS_DIR = settings.DATA_DIR / 'events'
-    files = EVENTS_DIR.glob('*.md')
+    files = settings.EVENTS_DIR.glob('*.md')
 
-    events = [EventPost.load(file) for file in files]
+    events = [EventPost.load(file, settings.IMAGES_DIR) for file in files]
     events.sort(key=lambda event: event.event_number, reverse=True)
 
     return templates.TemplateResponse(
@@ -43,23 +42,28 @@ def events(request: Request) -> HTMLResponse:
         context={
             'page_header': {
                 'title': 'Events',
-                'sub_title': 'Information regarding upcoming and past events.'
+                'sub_title': 'Information regarding upcoming and past events.',
+                'icon': 'icons/calendar.svg'
             },
-            'posts': events
+            'events': events
         }
     )
 
 @app.get('/resources', name='resources')
 def about(request: Request) -> HTMLResponse:
 
+    resources = Resource.load_list(settings.DATA_DIR / 'resources.json')
+    
     return templates.TemplateResponse(
         request=request,
         name='pages/resources.html',
         context={
             'page_header': {
                 'title': 'Resources',
-                'sub_title': 'Useful resources for Python, Data Science, AI, ML and more.'
-            }
+                'sub_title': 'Useful resources for Python, Data Science, AI, ML and more.',
+                'icon': 'icons/books.svg'
+            },
+            'resources': resources
         }
     )
 
@@ -72,11 +76,11 @@ def jobs(request: Request) -> HTMLResponse:
         context={
             'page_header': {
                 'title': 'Jobs and Careers',
-                'sub_title': 'Information and advice for Python and Data Science jobs in Norwich area.'
+                'sub_title': 'Information and advice for Python and Data Science jobs in Norwich area.',
+                'icon': 'icons/suitcase.svg'
             }
         }
     )
-
 
 @app.get('/about', name='about')
 def about(request: Request) -> HTMLResponse:
@@ -87,7 +91,8 @@ def about(request: Request) -> HTMLResponse:
         context={
             'page_header': {
                 'title': 'About us',
-                'sub_title': 'Details about the PyData Norwich group.'
+                'sub_title': 'Details about the PyData Norwich group.',
+                'icon': 'icons/information.svg'
             }
         }
     )

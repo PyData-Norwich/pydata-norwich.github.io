@@ -1,0 +1,142 @@
+.event {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.12);
+    margin-bottom: 40px;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.event-main {
+    flex: 2;
+    width: 66.67%;
+}
+
+.event-image {
+    flex: 1;
+    width: 33.33%;
+    max-width: 400px;
+    padding: 20px 20px 20px 0;
+}
+
+.event-image img {
+    width: 100%;
+}
+
+.event-content {
+    width: 100%;
+    padding: 30px;
+}
+
+.event-content p {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-bottom: 15px;
+}
+
+.event-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.event-header h2 {
+    width: 100%;
+    color: var(--light-blue);
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+}
+
+.event-subheader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: bottom;
+    margin-bottom: 25px;
+}
+
+.event-subheader .event-date {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.event-subheader .show-hide-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--light-blue-saturated);
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.event-subheader .show-hide-btn:hover {
+    text-decoration: underline;
+}
+
+
+.event-details h1, .event-details h2 {
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--light-blue);
+    font-size: 1.4em;
+}
+
+.event-details h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.event-details h4 {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.event-details ul {
+    line-height: 1.8em;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.event-details ol {
+    line-height: 1.8em;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.event-details li {
+    font-size: 1em;
+}
+
+.event-details .event-detail {
+    display: none;
+}
+
+.event-details .event-detail.show {
+    display: block;
+}
+
+.event-footer {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+@media (max-width: 768px) {
+
+
+    .event-image {
+        display: none;
+    }
+}

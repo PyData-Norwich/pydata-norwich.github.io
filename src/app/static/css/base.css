@@ -35,7 +35,7 @@ a:hover {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
     padding: 0px 20px;
 }
@@ -73,11 +73,40 @@ a:hover {
     background-color: var(--primary-orange-saturated);
 }
 
+/* Ident */
 
-@media (max-width: 768px) {
+.ident {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 12px;
+    max-width: 100px;
+}
+
+.ident .ident-block {
+    align-self: center;
+    width: 60px;
+    height: 4px;
+}
+
+.ident .ident-block-blue {
+    background-color: var(--light-blue);
+}
+
+.ident .ident-block-orange {
+    background-color: var(--primary-orange);
+}
+
+.ident .ident-block-white {
+    background-color: white;
+}
+
+
+/* @media (max-width: 768px) {
 
     .container {
         padding: 0px 10px;
     }
 
-}
+} */
