@@ -28,7 +28,7 @@
 }
 
 .navbar-logo h2 {
-    transform: translateY(6px);
+    transform: translateY(4px);
     margin-left: 10px;
     font-weight: 700;
 }
@@ -79,14 +79,13 @@
 
 }
 
-
 @media (max-width: 768px) {
 
     .navbar-links {
         display: flex;        
         position: absolute;
         right: 0px;
-        top: 89px;
+        top: 82px;
         flex-direction: column;
         background-color: var(--white-background);
         z-index: 3;

@@ -1,11 +1,75 @@
 {% extends 'pages/_base.html' %}
 
+{% block styles %}
+<link rel="stylesheet" href="/static/css/resources.css">
+<style>
+    #codebar-logo {
+        margin-bottom: 10px;
+    }
+
+    #codebar-logo img {
+        width: 200px;
+    }
+</style>
+{% endblock styles %}
+
 {% block content %}
 
 {% include 'components/page_header.html' %}
 
-<div class="container" style="margin-bottom: 30px;">
-    In development ...
+
+<div class="breakout-section breakout-section-white">
+    <div class="container breakout-content">
+        <div class="breakout-text">
+
+            <div id="codebar-logo">
+                <img src="/static/images/codebar_logo.png">
+            </div>
+            <h2>Want to learn to code?</h2>
+
+            <div class="ident">
+                <div class="ident-block ident-block-blue"></div>
+                <div class="ident-block ident-block-orange"></div>
+                <div class="ident-block ident-block-blue"></div>
+            </div>
+
+            <p style="margin-top: 40px;">Are you just starting your coding or Data Science journey?</p>
+            
+            <p>Norwich has a thriving coding community at codebar - a monthly meetup dedicated to helping people new to programming. Whether you're just starting out or looking to switch careers, codebar provides free programming workshops in a welcoming and inclusive environment.</p>
+            
+            <div class="breakout-buttons">
+                <a href="https://codebar.io/norwich" class="btn btn-blue">Learn More</a>
+                <a href="https://www.linkedin.com/showcase/codebar-norwich" class="btn btn-orange">Follow on LinkedIn</a>
+            </div>
+        </div>
+        <div class="breakout-image">
+            <img src="/static/images/codebar_norwich.jpg">
+        </div>
+    </div>
 </div>
+
+
+<div class="breakout-section breakout-section-blue">
+    <div class="container">
+
+        <h2 class="section-title">Useful Resources</h2>
+
+        <div class="ident" style="margin-bottom: 30px;">
+            <div class="ident-block ident-block-white"></div>
+            <div class="ident-block ident-block-orange"></div>
+            <div class="ident-block ident-block-white"></div>
+        </div>
+        <p class="section-subtitle">
+            If you're just starting out, these resources will help you get started with Python and Data Science.
+        </p>
+
+        <div class="resource-grid">
+            {% for resource in resources %}
+                {% include 'components/resource.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}

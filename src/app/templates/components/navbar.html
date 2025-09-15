@@ -1,9 +1,11 @@
 <nav class="navbar">
     <div class="container nav-container">
+    <a href="/">
     <div class="navbar-logo">
-            <a href="index.html"><img src="/static/images/pydata_large.png"></a>
+            <img src="/static/images/pydata_large.png">
             <h2>: Norwich</h2>
     </div>
+    </a>
     <div class="hamburger" onclick="showNavbar()">&#9776;</div>
     <ul class="navbar-links">
         {% for route in request.app.routes %}

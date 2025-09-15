@@ -1,0 +1,54 @@
+<div class="event">
+    <div class="event-container">
+
+    <div class="event-main">
+
+        <div class="event-content">
+            <div class="event-header">
+                <h2>{{ event.title }}</h2>
+            </div>
+            
+
+            <div class="ident">
+                <div class="ident-block ident-block-blue"></div>
+                <div class="ident-block ident-block-orange"></div>
+                <div class="ident-block ident-block-blue"></div>
+            </div>
+
+            <div class="event-subheader">
+                <div class="event-date">
+                    {{ event.event_date.strftime('%d %B %Y') }}
+                </div>
+            
+                <div><button class="show-hide-btn" onclick="showDetails(this)" data-show="false">show details</button></div>
+            </div>
+            
+            <div class="event-details">
+                {{ event.content|safe }}
+            </div>
+            
+        
+        </div>
+
+        <div class="event-footer">
+
+            {% if event.button %}
+                <div class="event-footer-button">
+                    <a href="{{ event.button.href }}" class="btn btn-blue">{{event.button.text}}</a>
+                </div>
+            {% endif %}
+        
+        </div>
+
+    </div>
+
+    <div class="event-image">
+        <img src="/static/images/{{ event.image }}">
+    </div>
+    
+
+    </div>
+
+
+
+</div>

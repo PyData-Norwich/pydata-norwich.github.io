@@ -1,0 +1,26 @@
+[
+    {
+        "title": "W3Schools",
+        "url": "https://www.w3schools.com/",
+        "description": "W3Schools has many introductory tutorials including Python, NumPy, Pandas and Django.",
+        "image": "w3schools.png"
+    },
+    {
+        "title": "Kaggle",
+        "url": "https://www.kaggle.com/",
+        "description": "Kaggle is a platform for data science and machine learning. It has many datasets and tutorials for all skill levels.",
+        "image": "kaggle.svg"
+    },
+    {
+        "title": "Real Python",
+        "url": "https://realpython.com/",
+        "description": "Real Python has many tutorials for learning Python, Data Science, Machine Learning and more. It is great for learning the intricacies of the Python programming language.",
+        "image": "real-python.jpg"
+    },
+    {
+        "title": "Hugging Face",
+        "url": "https://huggingface.co/",
+        "description": "Hugging Face is a platform for machine learning and artificial intelligence. It has many models and tutorials on topics such as NLP, Computer Vision and Deep Learning.",
+        "image": "hugging_face.png"
+    }
+]
