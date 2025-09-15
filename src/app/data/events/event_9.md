@@ -2,7 +2,7 @@
 
 ## Date
 
-2025-03-17
+2025-09-29
 
 <section markdown="1" class="event-detail">
 
