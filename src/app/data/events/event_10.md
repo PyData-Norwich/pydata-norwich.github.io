@@ -32,4 +32,4 @@ Artlist, 27 St Giles St, Norwich NR2 1JN (use buzzer no. 4)
 
 ## Meetup
 
-[View on Meetup](hhttps://www.meetup.com/pydata-norwich/events/311363571)
+[View on Meetup](https://www.meetup.com/pydata-norwich/events/311363571)
