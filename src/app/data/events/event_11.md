@@ -1,4 +1,4 @@
-# PyData Norwich - October Meetup (Workshop)
+# PyData Norwich - November Meetup
 
 ## Date
 
