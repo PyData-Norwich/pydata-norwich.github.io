@@ -1,8 +1,8 @@
-# PyData Norwich - February Meetup (Get together)
+# PyData Norwich - July Meetup (Get together)
 
 ## Date
 
-2026-02-03
+2026-07-14
 
 ## Details
 
@@ -17,6 +17,7 @@ We'll resume our speaking events in due course
 ## Location
 
 The Playhouse Bar, 42-58 St Georges St, Norwich NR3 1AB
+
 ## Event outline
 
 We'll be there from 5.30pm onwards
